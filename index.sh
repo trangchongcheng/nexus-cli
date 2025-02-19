@@ -21,4 +21,4 @@ echo "🦀 Cài đặt Rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 
-echo "✅ Hoàn thành cài đặt"
+echo "✅ Hoàn thành cài đặt, hãy chạy lênh screen"
