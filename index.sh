@@ -34,4 +34,8 @@ echo "🦀 Cài đặt Rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source "$HOME/.cargo/env"
 
+# Thêm target riscv32i-unknown-none-elf cho Rust
+echo "🔧 Thêm target riscv32i-unknown-none-elf cho Rust..."
+rustup target add riscv32i-unknown-none-elf
+
 echo "✅ Hoàn thành cài đặt, hãy chạy lệnh 'screen -S nexus'"
