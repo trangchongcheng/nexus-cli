@@ -35,6 +35,6 @@ source "$HOME/.cargo/env"
 
 # Thêm target riscv32i-unknown-none-elf cho Rust
 echo "🔧 Thêm target riscv32i-unknown-none-elf cho Rust..."
-rustup target add riscv32i-unknown-none-elf
+cd /root/.nexus/network-api/clients/cli && rustup target add riscv32i-unknown-none-elf
 
 echo "✅ Hoàn thành cài đặt, hãy chạy lệnh 'screen -S nexus'"
