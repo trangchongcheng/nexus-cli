@@ -3,7 +3,9 @@
 set -e  # Dừng script nếu có lỗi xảy ra
 
 echo "🔄 Đang cập nhật hệ thống..."
-sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade -y
+
 
 echo "📦 Cài đặt các gói cần thiết..."
 sudo apt install -y screen curl libssl-dev pkg-config build-essential git-all protobuf-compiler unzip
