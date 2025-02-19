@@ -19,7 +19,6 @@ cd /usr/local
 sudo wget -q https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VERSION}/${PROTOC_ZIP}
 sudo unzip -o ${PROTOC_ZIP}
 sudo chmod +x /usr/local/bin/protoc
-rm -f ${PROTOC_ZIP}  # Xóa file zip sau khi cài đặt
 
 # Kiểm tra protoc
 if ! command -v protoc &> /dev/null; then
