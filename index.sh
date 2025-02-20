@@ -3,6 +3,9 @@
 set -e  # Dừng script nếu có lỗi xảy ra
 
 echo "🔄 Đang cập nhật hệ thống..."
+# Tắt hoàn toàn thông báo từ needrestart
+sudo sed -i 's/#\$nrconf{restart} =.*/$nrconf{restart} = "a";/' /etc/needrestart/needrestart.conf
+
 export NEEDRESTART_MODE=a  # Bỏ qua prompt restart service
 sudo DEBIAN_FRONTEND=noninteractive apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade -y
